@@ -1,2 +1,2 @@
-# 2020_FRC_Prototype
-Prototype for FRC 2020
+# Prototyping
+Prototyping for 2020
