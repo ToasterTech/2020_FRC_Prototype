@@ -7,6 +7,8 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.PWMTalonSRX;
 import edu.wpi.first.wpilibj.TimedRobot;
 
 /**
@@ -17,6 +19,14 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * project.
  */
 public class Robot extends TimedRobot {
+
+  //JoyStick
+  public Joystick test_joystick = new Joystick(0);
+  //public static Joysticks operatorStick = new JoySticks(1);
+  PWMTalonSRX test_motor = new PWMTalonSRX(1);
+  
+
+
   /**
    * This function is run when the robot is first started up and should be used
    * for any initialization code.
@@ -39,6 +49,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
+    this.test_motor.set(test_joystick.getRawAxis(5));
   }
 
   @Override
